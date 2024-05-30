@@ -5,6 +5,7 @@ import SideMenu from "../../organism/sidemenu";
 import Submenu from '../../organism/submenu';
 import BackgroundColorChanger from '../../atoms/BackgroundColorChanger';
 import Footer from '../../atoms/Footer';
+import PieArcLabel from '../../atoms/piechart';
 
 function Home() {
   const [backgroundColor, setBackgroundColor] = useState(() => {
@@ -60,11 +61,15 @@ function Home() {
 
             </div>
             <div>
+              <PieArcLabel />
+            </div>
+            <div>
               <MenuComponent  onSaveSelectedText={handleSaveSelectedText} backgroundColor={backgroundColor} />
             </div>
             <div>
               <Submenu backgroundColor={backgroundColor} />
             </div>
+            
           </div>
       </div>
       <Footer />
